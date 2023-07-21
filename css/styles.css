@@ -860,7 +860,6 @@ img {
 @media (max-width: 767px) {
     .container {
         min-height: 80px;
-        max-width: 428px;
     }
 
     .menu-wrapper {
@@ -884,9 +883,7 @@ img {
     }
 
     .advantages_wrapper {
-        flex-direction: column;
-        align-items: center;
-        min-width: 396px;
+        display: block;
     }
 
     .advantages_item {
