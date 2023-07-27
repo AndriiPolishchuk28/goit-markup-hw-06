@@ -16,7 +16,7 @@ h1, h2, h3, p, ul {
 
 img {
     display: block;
-    /* width: 100%; */
+    width: 100%;
     height: auto;
 }
 
@@ -72,14 +72,14 @@ img {
     padding: 24px 0
 }
 
-.menu-wrapper {
-    display: flex;
-    gap: 40px;
-}
-
 .address {
     font-style: normal;
 }
+
+.menu-wrapper {
+    display: flex;
+    gap: 40px;
+    }
 
 .address_info {
     color: #434455;
@@ -112,8 +112,6 @@ img {
     color: #404bbf;
 }
 
-
-
 .nav_menu:hover {
     color: #404bbf;
 }
@@ -129,8 +127,7 @@ img {
 .first_section {
     background-color: var(--main-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-    url(../images/people_bg.jpg);
-    max-width: 1440px;
+    url(../images/people-bg-mob.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -648,9 +645,9 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list_item:hover {
+/* .list_item:hover {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
+} */
 
 .item_link {
     display: block;
@@ -818,6 +815,16 @@ img {
     text-transform: capitalize;
 }
 
+.mobile_menu_link:hover,
+.mobile_menu_link:focus {
+    color: var(--logo-color);
+}
+
+.mobile_menu_link_active {
+    color: var(--logo-color);
+
+}
+
 .mobile_menu_item:not(last-child) {
     margin-bottom: 40px;
 }
@@ -860,11 +867,16 @@ img {
     transform: translateX(0);
 }
 
+@media screen and (max-width: 428px) { 
+    .mobile_phone {
+       font-size: 24px;
+    }
+}
+
 @media screen and (min-width: 428px) { 
     .container {
        max-width: 428px;
     }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -872,11 +884,11 @@ img {
            (min-resolution: 192dpi), (min-resolution: 2dppx) {
                 .first_section {
                     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-    url(../images/people-bg2x.jpg)
+    url(../images/people-bg-mob-2x.jpeg)
                 }
     }
     .container {
-        min-height: 80px;
+        min-height: 70px;
     }
 
     .menu-wrapper {
@@ -999,10 +1011,6 @@ img {
         margin-bottom: 72px;
     }
 
-    .subscri_text {
-        text-align: center;
-    }
-
     .email_input {
         width: 100%;
         margin-bottom: 16px;
@@ -1036,9 +1044,31 @@ img {
     .footer_top {
         flex-direction: column;
     }
+
+    .menu_portfolio {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .list_item {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
+    @media screen and (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi), (min-resolution: 2dppx) {
+                .first_section {
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/people-bg-tab-2x.jpeg)
+                }
+    }
+
+    .first_section {
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/people-bg-tab.jpeg)
+                }
+
     .menu-container {
         display: none;
     }
@@ -1071,17 +1101,25 @@ img {
     }
 
     .advantages_item {
-        flex-basis: calc(50% - 12px);
+        width: calc((100% - 24px) / 2);
     }
 
     .third_section {
         display: none;
     }
 
+    .team_section > .container {
+        width: 582px;
+    }
+
     .team_wrapper {
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 64px;
+    }
+
+    .team_item {
+            flex-basis: calc((100% - 24px) / 2);
     }
 
     .team_section {
@@ -1114,11 +1152,37 @@ img {
     .index_footer {
         padding: 96px 0;
     }
+
+    .list_item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .address > .menu-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .modal {
+        min-width: 408px;
+    }
 }
 
 @media screen and (min-width: 1158px) {
+    @media screen and (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi), (min-resolution: 2dppx) {
+                .first_section {
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/people_bg.jpeg)
+                }
+    }
+
+    .first_section {
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/people-bg-2x.jpeg)
+                }
+
     .container {
-        min-width: 1128px;
+        min-width: 1158px;
     }
 
      .mobile_btn {
@@ -1131,5 +1195,10 @@ img {
 
     .footer_top {
         display: flex;
+    }
+
+    .address_menu {
+        display: flex;
+        gap: 40px;
     }
 }

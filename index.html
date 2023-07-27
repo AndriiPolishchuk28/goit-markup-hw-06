@@ -42,7 +42,7 @@
           </ul>
         </nav>
         <address class="address">
-          <ul class="list">
+          <ul class="list address_menu">
             <li>
               <a class="link address_info" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
@@ -131,13 +131,24 @@
           <h2 class="third_section_title">What are we doing</h2>
           <ul class="list wrapper_img">
             <li class="list_macbook">
-              <img src="./images/macbook.jpg" alt="macbook" width="360" />
-            </li>
-            <li class="list_macbook">
-              <img src="./images/handy.jpg" alt="handy" width="360" />
+              <img
+                srcset="./images/macbook.jpg 1x, /images/macbook-2x.jpeg 2x"
+                src="./images/macbook.jpg"
+                alt="macbook"
+                width="360"
+              />
             </li>
             <li class="list_macbook">
               <img
+                srcset="./images/handy.jpg 1x, /images/handy-2x.jpeg 2x"
+                src="./images/handy.jpg"
+                alt="handy"
+                width="360"
+              />
+            </li>
+            <li class="list_macbook">
+              <img
+                srcset="./images/screens.jpg 1x, /images/screens-2x.jpeg 2x"
                 src="./images/screens.jpg"
                 alt="screens_of_handy"
                 width="360"
@@ -531,7 +542,11 @@
 
       <ul class="list mobile_menu_list">
         <li class="mobile_menu_item">
-          <a class="link mobile_menu_link" href="./index.html">Studio</a>
+          <a
+            class="link mobile_menu_link mobile_menu_link_active"
+            href="./index.html"
+            >Studio</a
+          >
         </li>
         <li class="mobile_menu_item">
           <a class="link mobile_menu_link" href="./portfolio.html">Portfolio</a>
