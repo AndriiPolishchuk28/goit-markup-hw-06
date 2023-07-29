@@ -131,7 +131,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 188px 0;
+    padding: 112px 0;
 }
 
 .main_title {
@@ -139,9 +139,10 @@ img {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: #ffffff;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
     max-width: 496px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .order_btn {
@@ -590,7 +591,8 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 90%; 
 }
 
 .text_contacts {
@@ -867,15 +869,39 @@ img {
     transform: translateX(0);
 }
 
-@media screen and (max-width: 428px) { 
+
+
+@media screen and (max-width: 427px) { 
     .mobile_phone {
        font-size: 24px;
+    }
+
+    .modal {
+        padding: 72px 16px 16px 16px;
+        top: 56%;
+    }
+
+    .link_company_item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .link_company {
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 428px) { 
     .container {
        max-width: 428px;
+    }
+
+    .mobile_social_list {
+        gap: 56px;
+        justify-content: flex-start;
+    }
+
+    .link_company {
+        width: 190px;
     }
 }
 
@@ -889,6 +915,10 @@ img {
     }
     .container {
         min-height: 70px;
+    }
+
+    .main_title {
+        margin-bottom: 72px;
     }
 
     .menu-wrapper {
@@ -980,12 +1010,8 @@ img {
         width: 110px;
     }
 
-    .link_company {
-        width: 190px;
-    }
-
     .company_wrapper {
-        gap: 16px;
+        gap: 72px 16px;
         justify-content: center;
     }
 
@@ -1034,7 +1060,7 @@ img {
     }
 
     .modal {
-        min-width: 392px;
+        max-width: 392px;
     }
 
     .section_portfolio {
@@ -1056,7 +1082,11 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-    @media screen and (min-device-pixel-ratio: 2),
+    .first_section {
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/people-bg-tab.jpeg)
+                }
+    @media (min-device-pixel-ratio: 2),
            (min-resolution: 192dpi), (min-resolution: 2dppx) {
                 .first_section {
                     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
@@ -1064,13 +1094,12 @@ img {
                 }
     }
 
-    .first_section {
-                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-    url(../images/people-bg-tab.jpeg)
-                }
-
     .menu-container {
         display: none;
+    }
+
+    .main_title {
+        margin-bottom: 36px;
     }
 
     .mobile_btn {
@@ -1079,6 +1108,10 @@ img {
 
     .container {
         max-width: 768px;
+    }
+
+    .address_info {
+        font-size: 12px;
     }
 
     .svg_wpapper {
@@ -1098,6 +1131,7 @@ img {
 
     .advantages_wrapper {
         flex-wrap: wrap;
+        gap: 72px 24px;
     }
 
     .advantages_item {
@@ -1133,10 +1167,12 @@ img {
     .company_wrapper {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 72px 24px;
     } 
 
     .footer_wrapper {
         flex-direction: column;
+        max-width: 584px;
     }
 
     .footer_top {
@@ -1163,23 +1199,24 @@ img {
     }
 
     .modal {
-        min-width: 408px;
+        max-width: 408px;
     }
 }
 
 @media screen and (min-width: 1158px) {
+    .first_section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+    url(../images/people-bg.jpeg);
+        padding: 188px 0;
+                }
+
     @media screen and (min-device-pixel-ratio: 2),
            (min-resolution: 192dpi), (min-resolution: 2dppx) {
                 .first_section {
                     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-    url(../images/people_bg.jpeg)
-                }
-    }
-
-    .first_section {
-                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
     url(../images/people-bg-2x.jpeg)
                 }
+    }
 
     .container {
         min-width: 1158px;
@@ -1190,7 +1227,7 @@ img {
     }
 
     .modal {
-        min-width: 408px;
+        max-width: 408px;
     }
 
     .footer_top {
