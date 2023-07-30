@@ -1153,7 +1153,7 @@ img {
     }
 
     .team_item {
-            flex-basis: calc((100% - 24px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
     }
 
     .team_section {
@@ -1162,6 +1162,10 @@ img {
 
     .customers_section {
         padding: 96px 0;
+    }
+
+    .link_company {
+        width: 168px;
     }
 
     .company_wrapper {
