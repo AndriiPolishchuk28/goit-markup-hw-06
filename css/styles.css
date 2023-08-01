@@ -1226,12 +1226,20 @@ img {
         min-width: 1158px;
     }
 
+    .main_title {
+        margin-bottom: 48px;
+    }
+
      .mobile_btn {
         display: none;
     }
 
     .modal {
         max-width: 408px;
+    }
+
+    .link_company {
+        width: 168px;
     }
 
     .footer_top {
